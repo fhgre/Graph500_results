@@ -69,7 +69,7 @@ This plot shows in comparison the TEPS value obtained running kernel 2 and kerne
 ![Scale = 10, more than 4 MPI slots with SSSP](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS%2BSSSP/Presentazione_BFS%2BSSSP-2.png)
 As the plot above, focusing only on two or more nodes of the cluster
 
-![Scale = 15, with SSSP] (https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS%2BSSSP/Presentazione_bfs%2BSSSP-3.png)
+![Scale = 15, with SSSP](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS%2BSSSP/Presentazione_BFS%2BSSSP-3.png)
 
 These are the results for Scale = 15, like the BFS-only kernel, we see that an increase in the problem size benefits the performance as the number of nodes increases.
 
