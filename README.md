@@ -54,7 +54,7 @@ The TEPS value is obtained by doing the mean of the TEPS obtained from each run 
 This plot clearly shows that for the execution of kernel 2, once there are more than two MPI Slots, so when there is an actual need to use the interconnection network of the cluster, the TEPS performance value drops to a fraction of the value obtained on a single node of the cluster.
 
 ![Scale = 10, more than 4 MPI slots](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS_only/Presentazione_BFS_only-2.png)
-This one instead, shows in detali that, while there is a slight improvement in performance by using more MPI slots, it is not substantial.
+This one instead, shows in detali that even by adding nodes, the performance continues to decrease.
 
 ![Scale = 15](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS_only/Presentazione_BFS_only-3.png)
 This other plot shows a situation similar to the one with Scale = 10, but it shows a slight improvement on the TEPS value as we add MPI Slots.
