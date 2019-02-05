@@ -63,17 +63,17 @@ This other plot shows a situation similar to the one with Scale = 10, but it sho
 And it can be better seen here.
 It can then be concluded that, as the problem size increases, the communication overhead gets a little less significant.
 
-![Scale = 10, with BFS](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS%2BSSSP/Presentazione_BFS%2BSSSP-1.png)
+![Scale = 10, with SSSP](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS%2BSSSP/Presentazione_BFS%2BSSSP-1.png)
 This plot shows in comparison the TEPS value obtained running kernel 2 and kernel 3 and shows a similar trend to the kernel 2 only graph.
 
-![Scale = 10, more than 4 MPI slots with BFS](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS%2BSSSP/Presentazione_BFS%2BSSSP-2.png)
+![Scale = 10, more than 4 MPI slots with SSSP](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS%2BSSSP/Presentazione_BFS%2BSSSP-2.png)
 As the plot above, focusing only on two or more nodes of the cluster
 
-![Scale = 15, with SSSP] (https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS%2BSSSP/Presentazione_BFS%2BSSSP-3.png)
+![Scale = 15, with SSSP] (https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS%2BSSSP/Presentazione_bfs%2BSSSP-3.png)
 
-Ciao sono qui perchè c'è bisogno di una didascalia, altrimenti l'immagine successiva viene considerata come tale. Forse utilizzando del codice markdown per inserire una riga vuota si riesce a far funzionare tutto
+These are the results for Scale = 15, like the BFS-only kernel, we see that an increase in the problem size benefits the performance as the number of nodes increases.
 
-![Scale = 15, more than 4 MPI slots with BFS](https://github.com/fhgre/Graph500_results/tree/master/Results_upd/G500_BFS%2BSSSP)
+![Scale = 15, more than 4 MPI slots with SSSP](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS%2BSSSP/Presentazione_BFS%2BSSSP-4.png)
 
 In this second plot for Scale = 15, we can see in detail the increase of the TEPS value, which is more evident thanks to the increased problem size and also similar both for kernel 2 and kernel 3
 
