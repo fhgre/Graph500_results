@@ -12,8 +12,9 @@ The benchmark generates an edge list, on which it builds a graph ( *Kernel 1*) a
 ### Benchmark Parameters
 * **Scale** = Logarithm base two of the number of edges in the generated graph
 * **Edgefactor** = Ratio between the number of edges and the graph's vertex count
-* **N** = Number of vertices in the graph, 2^scale^
-* **M** = Number of edges in the graph, $M = Edgefactor \cdot N$
+* **N** = Number of vertices in the graph, ![Math for 2^(scale)](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/math/2scale.gif)
+
+* **M** = Number of edges in the graph, ![Math for M](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/math/M.gif)
 
 The benchmark's script accepts in input the **Scale** and the **Edgefactor**.
 
@@ -34,7 +35,7 @@ For our testing purposes, we did not change the parameters of the kernels of the
 ### Metrics
 The major metric used by Graph500 is the **TEPS**, Traversed Edges Per Second, calculated as:
 
-TEPS = $\frac{m}{Time(k2)}$
+![Math for TEPS](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/math/TEPS.gif)
 
 Where **m**  is the number of undirected edges in a traversed component of the graph and **Time(k2)** is the  execution time of kernel 2 (BFS)
 
@@ -51,22 +52,28 @@ The Scale parameter ranged between 10 and 15, while we used 4, 8, 16, and 32 for
 The TEPS value is obtained by doing the mean of the TEPS obtained from each run and each Edgefactor.
 
 ![Scale = 10](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS_only/Presentazione_BFS_only-1.png)
+
 This plot clearly shows that for the execution of kernel 2, once there are more than two MPI Slots, so when there is an actual need to use the interconnection network of the cluster, the TEPS performance value drops by two orders of magnitude from the value obtained on a single node of the cluster.
 
 ![Scale = 10, more than 4 MPI slots](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS_only/Presentazione_BFS_only-2.png)
+
 This one instead, shows in detali that even by adding nodes, the performance continues to decrease.
 
 ![Scale = 15](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS_only/Presentazione_BFS_only-3.png)
+
 This other plot shows a situation similar to the one with Scale = 10, but it shows a slight improvement on the TEPS value as we add MPI Slots.
 
 ![Scale = 15, more than 4 MPI slots](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS_only/Presentazione_BFS_only-4.png)
+
 And it can be better seen here.
 It can then be concluded that, as the problem size increases, the communication overhead gets a little less significant.
 
 ![Scale = 10, with SSSP](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS%2BSSSP/Presentazione_BFS%2BSSSP-1.png)
+
 This plot shows in comparison the TEPS value obtained running kernel 2 and kernel 3 and shows a similar trend to the kernel 2 only graph.
 
 ![Scale = 10, more than 4 MPI slots with SSSP](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS%2BSSSP/Presentazione_BFS%2BSSSP-2.png)
+
 As the plot above, focusing only on two or more nodes of the cluster
 
 ![Scale = 15, with SSSP](https://github.com/fhgre/Graph500_results/blob/master/Results_upd/G500_BFS%2BSSSP/Presentazione_BFS%2BSSSP-3.png)
